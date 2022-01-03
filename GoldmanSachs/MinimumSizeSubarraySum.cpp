@@ -20,7 +20,8 @@ int minSubArrayLen(int target, vector<int> &nums)
         }
         j++;
     }
-    // if(sumi>=target)ans=min(ans,j-i+1);
+    if (sumi >= target)
+        ans = min(ans, j - i + 1);
     if (ans == INT_MAX)
         return 0;
     return ans;
