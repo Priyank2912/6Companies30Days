@@ -1,27 +1,27 @@
-void dfs(int root, vector<int> &vis, vector<int> adj[], int c, int d)
+void dfs(int node, vector<int> &v, vector<int> adj[], int c, int d)
 {
-    vis[root] = 1;
+    v[node] = 1;
 
-    for (auto e : adj[root])
+    for (auto e : adj[node])
     {
-        if ((root == c and e == d) or (root == d and e == c))
+        if ((node == c and e == d) or (node == d and e == c))
         {
             continue;
         }
 
-        if (!vis[e])
+        if (!v[e])
         {
-            dfs(e, vis, adj, c, d);
+            dfs(e, v, adj, c, d);
         }
     }
 }
 
 int isBridge(int V, vector<int> adj[], int c, int d)
 {
-    vector<int> vis(V, 0);
+    vector<int> v(V, 0);
 
-    dfs(c, vis, adj, c, d);
-    if (!vis[d])
+    dfs(c, v, adj, c, d);
+    if (!v[d])
         return 1;
     else
         return 0;
