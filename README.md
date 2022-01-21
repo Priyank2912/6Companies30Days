@@ -1,5 +1,3 @@
-#RevisewithArsh #6Companies30days #dhindhora #stop #procastination
- 
 #ReviseWithArsh #6Companies30Days Challenge!
 
 P.S This can be started anytime in the month of January.
