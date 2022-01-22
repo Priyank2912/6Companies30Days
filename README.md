@@ -1,6 +1,5 @@
 #ReviseWithArsh #6Companies30Days Challenge!
 
-P.S This can be started anytime in the month of January.
 
 For complete details , go through the video : https://www.youtube.com/watch?v=8ESo_bXhRC4
 
