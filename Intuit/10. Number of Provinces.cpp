@@ -1,13 +1,13 @@
 class Solution
 {
 public:
-    void dfs(int node, vector<int> &vis, vector<int> adj[])
+    void dfs(int node, vector<int> &v, vector<int> adj[])
     {
-        vis[node] = 1;
+        v[node] = 1;
         for (auto g : adj[node])
         {
-            if (vis[g] == 0)
-                dfs(g, vis, adj);
+            if (v[g] == 0)
+                dfs(g, v, adj);
         }
     }
 
@@ -30,13 +30,13 @@ public:
         }
 
         int ans = 0;
-        vector<int> vis(n, 0);
+        vector<int> v(n, 0);
         for (int i = 0; i < n; i++)
         {
-            if (vis[i] == 0)
+            if (v[i] == 0)
             {
                 ans++;
-                dfs(i, vis, adj);
+                dfs(i, v, adj);
             }
         }
         return ans;

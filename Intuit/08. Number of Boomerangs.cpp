@@ -2,13 +2,14 @@ int numberOfBoomerangs(vector<vector<int>> &A)
 {
 
     int ans = 0;
+    int n = A.size();
 
-    for (int i = 0; i < A.size(); ++i)
+    for (int i = 0; i < n; ++i)
     {
 
         unordered_map<long, int> mp;
 
-        for (int j = 0; j < A.size(); ++j)
+        for (int j = 0; j < n; ++j)
         {
 
             if (j == i)
