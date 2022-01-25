@@ -6,7 +6,7 @@ map<int, vector<int>> mp;
 
 void DFS(int n)
 {
-    for (int i = 0; i < n; ++i)
+    for (int i = 0; i < n; i++)
     {
         if (!vis[i])
             geti(i);
