@@ -1,7 +1,7 @@
 stack<int> S;
 vector<int> vis;
 vector<int> P;
-bool cycle;
+bool che;
 map<int, vector<int>> mp;
 
 void DFS(int n)
@@ -15,7 +15,7 @@ void DFS(int n)
 
 void geti(int node)
 {
-    if (cycle)
+    if (che)
         return;
 
     vis[node] = true;
@@ -24,7 +24,7 @@ void geti(int node)
     for (int i : mp[node])
     {
         if (P[i] == true)
-            cycle = true;
+            che = true;
         if (!vis[i])
             geti(i);
     }
@@ -38,7 +38,7 @@ vector<int> findOrder(int n, vector<vector<int>> &A)
     vector<int> Ans;
     vis.assign(n, false);
     P.assign(n, false);
-    cycle = false;
+    che = false;
     for (auto i : A)
     {
         mp[i[1]].push_back(i[0]);
@@ -52,7 +52,7 @@ vector<int> findOrder(int n, vector<vector<int>> &A)
         S.pop();
     }
 
-    if (cycle)
+    if (che)
         return {};
     return Ans;
 }
