@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    bool che(int mid, vector<int> &A, int m)
+    bool che(int mid, vector<int> &A, int t)
     {
         int q = 0;
         int c = 1;
@@ -17,12 +17,12 @@ public:
             }
         }
         // cout << c << " " << q << endl;
-        if (c == m)
+        if (c == t)
             return true;
         return false;
     }
 
-    int splitArray(vector<int> &A, int m)
+    int splitArray(vector<int> &A, int t)
     {
 
         int ans = -1;
@@ -41,7 +41,7 @@ public:
         {
             int mid = r - (r - l) / 2;
 
-            if (che(mid, A, m))
+            if (che(mid, A, t))
             {
                 ans = mid;
                 r = mid - 1;
