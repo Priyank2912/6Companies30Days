@@ -31,4 +31,4 @@ Company Name : **Intuit**
 
 **Day 27-31 :**
 
-Company Name : **Walmart Global Tech**
+Company Name : **Walmart Global Tech India**
