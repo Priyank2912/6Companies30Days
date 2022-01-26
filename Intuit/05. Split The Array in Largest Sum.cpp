@@ -22,16 +22,16 @@ public:
         return false;
     }
 
-    int splitArray(vector<int> &nums, int m)
+    int splitArray(vector<int> &A, int m)
     {
 
         int ans = -1;
         int l = INT_MAX, r = 0;
 
-        sort(nums.begin(), nums.end());
-        reverse(nums.begin(), nums.end());
+        sort(A.begin(), A.end());
+        reverse(A.begin(), A.end());
 
-        for (auto h : nums)
+        for (auto h : A)
         {
             r += h;
             l = min(l, h);
@@ -41,7 +41,7 @@ public:
         {
             int mid = r - (r - l) / 2;
 
-            if (che(mid, nums, m))
+            if (che(mid, A, m))
             {
                 ans = mid;
                 r = mid - 1;
@@ -49,6 +49,7 @@ public:
             else
                 l = mid + 1;
         }
+
         return ans;
     }
 };
