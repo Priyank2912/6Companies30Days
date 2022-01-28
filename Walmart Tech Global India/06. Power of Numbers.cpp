@@ -1,7 +1,7 @@
 class Solution
 {
 public:
-    long long mfastPower(long long a, long long b, long long c)
+    long long geti(long long a, long long b, long long c)
     {
         long long ans = 1;
         while (b > 0)
@@ -20,6 +20,6 @@ public:
     long long power(int N, int R)
     {
 
-        return mfastPower(N, R, 1000000007);
+        return geti(N, R, 1000000007);
     }
 };
